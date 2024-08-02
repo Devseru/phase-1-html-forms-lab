@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>My Awesome Company Contact Page</title>
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="/submit" method="post">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter Name" required>
+        </div>
 
-    <h1>Company Inc.</h1>
-    <h2>For all your incorporated company needs</h2>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+        </div>
 
-    <!-- First, create a form tag where our inputs will be nested -->
+        <div class="form-group">
+            <label for="phone">Telephone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter Telephone (optional)">
+        </div>
 
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Enter Message" required></textarea>
+        </div>
 
-      <!-- Add a label for 'fullname'-->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="subscribe"> Subscribe to our newsletter
+            </label>
+        </div>
 
-      <!-- Add a text input with the id and name attributes set to 'fullname' -->
-      <!-- Include the place holder text "Enter Name" and make this input required -->
-
-
-      <!-- Add a label for 'email'-->
-
-      <!-- Add a email input with the id and name attributes set to 'email' -->
-      <!-- Include the place holder text "Enter Email" and make this input required -->
-
-
-      <!-- Add a label for 'phone'-->
-
-      <!-- Add a telephone input with the id and name attributes set to 'phone' -->
-      <!-- Include the place holder text "Enter Telephone (optional)" -->
-
-
-      <!-- Add a label for 'message'-->
-
-      <!-- Add a textarea tag with the id and name attributes set to 'message' -->
-      <!-- Include the place holder text "Enter Message" -->
-
-
-      <!-- Add a checkbox input with the id set to 'checkbox' -->
-
-
-
-      <!-- Add an input with the type set to 'submit' -->
-
-    
-  </body>
+        <button type="submit">Submit</button>
+    </form>
+</body>
 </html>
